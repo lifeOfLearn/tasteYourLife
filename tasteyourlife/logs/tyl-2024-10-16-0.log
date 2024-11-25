@@ -1,0 +1,280 @@
+2024-10-16 08:51:40.672 [main] INFO  org.springframework.boot.SpringApplication - 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+[32m :: Spring Boot :: [39m              [2m (v3.3.4)[0;39m
+
+
+2024-10-16 08:51:40.678 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-16 08:51:40.713 [main] INFO  iot.tyl.TasteyourlifeApplication - Starting TasteyourlifeApplication using Java 21.0.4 with PID 9380 (C:\Users\a4011\Desktop\iot\tasteyourlife\target\classes started by a4011 in C:\Users\a4011\Desktop\iot\tasteyourlife)
+2024-10-16 08:51:40.714 [main] INFO  iot.tyl.TasteyourlifeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-10-16 08:51:41.576 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-16 08:51:41.578 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16 08:51:41.749 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 162 ms. Found 1 JPA repository interface.
+2024-10-16 08:51:41.766 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-16 08:51:41.767 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-16 08:51:41.787 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface iot.tyl.dao.CustomerRepositoryJpa; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-16 08:51:41.787 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2024-10-16 08:51:42.527 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 443 (https)
+2024-10-16 08:51:42.550 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:51:42.557 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-16 08:51:42.558 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16 08:51:42.614 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/tyl] - Initializing Spring embedded WebApplicationContext
+2024-10-16 08:51:42.614 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1870 ms
+2024-10-16 08:51:42.738 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-16 08:51:42.977 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a7d0c9f
+2024-10-16 08:51:42.980 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-16 08:51:43.021 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16 08:51:43.109 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16 08:51:43.156 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-16 08:51:43.510 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16 08:51:43.621 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-16 08:51:44.369 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16 08:51:44.372 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16 08:51:45.287 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16 08:51:45.753 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:51:45.922 [main] INFO  o.apache.tomcat.util.net.NioEndpoint.certificate - Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\a4011\.keystore] using alias [ssl] with trust store [null]
+2024-10-16 08:51:45.946 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 443 (https) with context path '/tyl'
+2024-10-16 08:51:45.952 [main] INFO  iot.tyl.TasteyourlifeApplication - Started TasteyourlifeApplication in 5.63 seconds (process running for 6.188)
+2024-10-16 08:51:52.207 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-10-16 08:51:52.209 [RMI TCP Connection(2)-127.0.0.1] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:51:52.230 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16 08:51:52.232 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-16 08:51:52.238 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-16 08:51:55.221 [main] INFO  org.springframework.boot.SpringApplication - 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+[32m :: Spring Boot :: [39m              [2m (v3.3.4)[0;39m
+
+
+2024-10-16 08:51:55.225 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-16 08:51:55.281 [main] INFO  iot.tyl.TasteyourlifeApplication - Starting TasteyourlifeApplication using Java 21.0.4 with PID 5912 (C:\Users\a4011\Desktop\iot\tasteyourlife\target\classes started by a4011 in C:\Users\a4011\Desktop\iot\tasteyourlife)
+2024-10-16 08:51:55.282 [main] INFO  iot.tyl.TasteyourlifeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-10-16 08:51:55.910 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-16 08:51:55.911 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16 08:51:56.037 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interface.
+2024-10-16 08:51:56.056 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-16 08:51:56.058 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-16 08:51:56.079 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface iot.tyl.dao.CustomerRepositoryJpa; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-16 08:51:56.079 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2024-10-16 08:51:56.763 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 443 (https)
+2024-10-16 08:51:56.781 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:51:56.786 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-16 08:51:56.787 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16 08:51:56.827 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/tyl] - Initializing Spring embedded WebApplicationContext
+2024-10-16 08:51:56.827 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1500 ms
+2024-10-16 08:51:56.953 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-16 08:51:57.297 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@369ad7da
+2024-10-16 08:51:57.299 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-16 08:51:57.329 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16 08:51:57.375 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16 08:51:57.407 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-16 08:51:57.662 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16 08:51:57.742 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-16 08:51:58.437 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16 08:51:58.440 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16 08:51:59.270 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16 08:51:59.715 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:51:59.898 [main] INFO  o.apache.tomcat.util.net.NioEndpoint.certificate - Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\a4011\.keystore] using alias [ssl] with trust store [null]
+2024-10-16 08:51:59.917 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 443 (https) with context path '/tyl'
+2024-10-16 08:51:59.924 [main] INFO  iot.tyl.TasteyourlifeApplication - Started TasteyourlifeApplication in 5.066 seconds (process running for 5.754)
+2024-10-16 08:52:23.410 [https-jsse-nio-443-exec-5] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/tyl] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16 08:52:23.410 [https-jsse-nio-443-exec-5] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-10-16 08:52:23.411 [https-jsse-nio-443-exec-5] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-10-16 08:52:23.452 [https-jsse-nio-443-exec-5] INFO  o.s.s.a.AnnotationAsyncExecutionInterceptor - More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [threadPoolTaskExecutor, createTaskExecutor]
+2024-10-16 08:52:23.454 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 0 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.454 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 1 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.454 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 2 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.454 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 3 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.454 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 4 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.454 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 5 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.454 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 6 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.454 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 7 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 8 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 9 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 0 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 1 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 0 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 2 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 1 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 3 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 2 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 4 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 3 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 5 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 4 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 6 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 5 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 7 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 6 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 8 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 7 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.455 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 9 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 8 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.455 [https-jsse-nio-443-exec-5] INFO  iot.tyl.service.impl.CaptchaServiceImpl - 9 : class iot.tyl.service.impl.CaptchaServiceImpl
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 0 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 1 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 2 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 3 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 4 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 5 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 6 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 7 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 8 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.456 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 9 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:23.457 [SimpleAsyncTaskExecutor-3] INFO  iot.tyl.aop.LogAspect - 進入:class:RedisServiceImpl ,mehod:saveValue, param:[fe68b7ab-390f-41db-8eca-0884b228139a, UJ8ONH, 300]
+2024-10-16 08:52:23.457 [SimpleAsyncTaskExecutor-2] INFO  iot.tyl.aop.LogAspect - 進入:class:CaptchaServiceImpl ,mehod:getImage, param:[fe68b7ab-390f-41db-8eca-0884b228139a]
+2024-10-16 08:52:23.457 [SimpleAsyncTaskExecutor-1] INFO  iot.tyl.aop.LogAspect - 進入:class:CaptchaController ,mehod:captchaImg, param:[org.apache.catalina.connector.RequestFacade@6ce283a9]
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 0 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 1 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 2 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 3 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 4 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 5 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 6 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 7 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 8 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 9 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.083 [SimpleAsyncTaskExecutor-4] INFO  iot.tyl.aop.LogAspect - 進入:class:JwtServiceImpl ,mehod:generateToken, param:[fe68b7ab-390f-41db-8eca-0884b228139a, 300]
+2024-10-16 08:52:24.186 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 0 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.186 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 1 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.186 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 2 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.186 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 3 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.187 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 4 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.187 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 5 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.187 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 6 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.187 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 7 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.187 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 8 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.187 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 9 : class iot.tyl.aop.LogAspect
+2024-10-16 08:52:24.187 [SimpleAsyncTaskExecutor-5] INFO  iot.tyl.aop.LogAspect - 進入:class:CookieServiceImpl ,mehod:getCookie, param:[/tyl/captcha/image, eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJhbGwiLCJqdGkiOiJrd2NoZW5nIiwiaXNzIjoiaW90MjRhLnR5bCIsInN1YiI6ImZlNjhiN2FiLTM5MGYtNDFkYi04ZWNhLTA4ODRiMjI4MTM5YSIsImlhdCI6MTcyOTAzOTk0NCwiZXhwIjoxNzI5MDQwMjQ0fQ.C3hzwbARlyTRv0JfOuz5j8cPTHB9VhnjhzqWPEDei9_GnkNcYAsZRIfIOY0J7enX845Bom5sJwE2qoVc-OEWaQ]
+2024-10-16 08:54:09.157 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-10-16 08:54:09.159 [RMI TCP Connection(4)-127.0.0.1] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:54:09.186 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16 08:54:09.189 [RMI TCP Connection(4)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-16 08:54:09.195 [RMI TCP Connection(4)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-16 08:54:10.800 [main] INFO  org.springframework.boot.SpringApplication - 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+[32m :: Spring Boot :: [39m              [2m (v3.3.4)[0;39m
+
+
+2024-10-16 08:54:10.803 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-16 08:54:10.812 [main] INFO  org.springframework.boot.SpringApplication - 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+[32m :: Spring Boot :: [39m              [2m (v3.3.4)[0;39m
+
+
+2024-10-16 08:54:10.813 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-16 08:54:10.851 [main] INFO  iot.tyl.TasteyourlifeApplication - Starting TasteyourlifeApplication using Java 21.0.4 with PID 10576 (C:\Users\a4011\Desktop\iot\tasteyourlife\target\classes started by a4011 in C:\Users\a4011\Desktop\iot\tasteyourlife)
+2024-10-16 08:54:10.852 [main] INFO  iot.tyl.TasteyourlifeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-10-16 08:54:10.863 [main] INFO  iot.tyl.TasteyourlifeApplication - Starting TasteyourlifeApplication using Java 21.0.4 with PID 12148 (C:\Users\a4011\Desktop\iot\tasteyourlife\target\classes started by a4011 in C:\Users\a4011\Desktop\iot\tasteyourlife)
+2024-10-16 08:54:10.863 [main] INFO  iot.tyl.TasteyourlifeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-10-16 08:54:11.513 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-16 08:54:11.515 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16 08:54:11.521 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-16 08:54:11.523 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16 08:54:11.640 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+2024-10-16 08:54:11.659 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-16 08:54:11.659 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 130 ms. Found 1 JPA repository interface.
+2024-10-16 08:54:11.660 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-16 08:54:11.678 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-10-16 08:54:11.679 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-10-16 08:54:11.684 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface iot.tyl.dao.CustomerRepositoryJpa; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-16 08:54:11.685 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2024-10-16 08:54:11.697 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface iot.tyl.dao.CustomerRepositoryJpa; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-10-16 08:54:11.697 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2024-10-16 08:54:12.395 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 443 (https)
+2024-10-16 08:54:12.406 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:54:12.409 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 443 (https)
+2024-10-16 08:54:12.411 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-16 08:54:12.411 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16 08:54:12.420 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:54:12.426 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-16 08:54:12.427 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16 08:54:12.459 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/tyl] - Initializing Spring embedded WebApplicationContext
+2024-10-16 08:54:12.459 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1558 ms
+2024-10-16 08:54:12.473 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/tyl] - Initializing Spring embedded WebApplicationContext
+2024-10-16 08:54:12.473 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1564 ms
+2024-10-16 08:54:12.607 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-16 08:54:12.619 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-16 08:54:12.878 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@466fedfa
+2024-10-16 08:54:12.881 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@280484c7
+2024-10-16 08:54:12.881 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-16 08:54:12.884 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-16 08:54:12.920 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16 08:54:12.921 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16 08:54:12.979 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16 08:54:12.980 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16 08:54:13.018 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-16 08:54:13.021 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-16 08:54:13.309 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16 08:54:13.318 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16 08:54:13.394 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-16 08:54:13.400 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-16 08:54:14.138 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16 08:54:14.138 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16 08:54:14.141 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16 08:54:14.141 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16 08:54:15.072 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16 08:54:15.080 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16 08:54:15.635 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:54:15.653 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 08:54:15.662 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-10-16 08:54:15.670 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16 08:54:15.671 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-16 08:54:15.677 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-16 08:54:15.687 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16 08:54:15.705 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 443 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 443 or configure this application to listen on another port.
+
+2024-10-16 08:54:15.823 [main] INFO  o.apache.tomcat.util.net.NioEndpoint.certificate - Connector [https-jsse-nio-443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\a4011\.keystore] using alias [ssl] with trust store [null]
+2024-10-16 08:54:15.837 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 443 (https) with context path '/tyl'
+2024-10-16 08:54:15.844 [main] INFO  iot.tyl.TasteyourlifeApplication - Started TasteyourlifeApplication in 5.43 seconds (process running for 6.129)
+2024-10-16 08:54:23.565 [https-jsse-nio-443-exec-5] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/tyl] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16 08:54:23.565 [https-jsse-nio-443-exec-5] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-10-16 08:54:23.566 [https-jsse-nio-443-exec-5] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-10-16 08:54:23.600 [Log-1] INFO  iot.tyl.aop.LogAspect - 進入:class:CaptchaController ,mehod:captchaImg, param:[org.apache.catalina.connector.RequestFacade@1344e6a7]
+2024-10-16 08:54:23.600 [Log-2] INFO  iot.tyl.aop.LogAspect - 進入:class:CaptchaServiceImpl ,mehod:getImage, param:[d7fc2c98-63d2-437e-937b-6f91b9dc7fcc]
+2024-10-16 08:54:23.600 [Log-1] INFO  iot.tyl.aop.LogAspect - 進入:class:RedisServiceImpl ,mehod:saveValue, param:[d7fc2c98-63d2-437e-937b-6f91b9dc7fcc, MGAMTJ, 300]
+2024-10-16 08:54:24.209 [Log-2] INFO  iot.tyl.aop.LogAspect - 進入:class:JwtServiceImpl ,mehod:generateToken, param:[d7fc2c98-63d2-437e-937b-6f91b9dc7fcc, 300]
+2024-10-16 08:54:24.313 [Log-1] INFO  iot.tyl.aop.LogAspect - 進入:class:CookieServiceImpl ,mehod:getCookie, param:[/tyl/captcha/image, eyJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJhbGwiLCJqdGkiOiJrd2NoZW5nIiwiaXNzIjoiaW90MjRhLnR5bCIsInN1YiI6ImQ3ZmMyYzk4LTYzZDItNDM3ZS05MzdiLTZmOTFiOWRjN2ZjYyIsImlhdCI6MTcyOTA0MDA2NCwiZXhwIjoxNzI5MDQwMzY0fQ.NC_SCh5fb1OltIO57_k5AGPwQwXAIxbKKJ4_WLR0IkTIlHFpyijhgkSFGNQjgTM-jJqH0pKovdgVZBOevDgadw]
+2024-10-16 16:25:35.217 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /192.168.58.157:6379
+2024-10-16 16:25:44.014 [RMI TCP Connection(455)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-10-16 16:25:44.041 [RMI TCP Connection(455)-127.0.0.1] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["https-jsse-nio-443"]
+2024-10-16 16:25:44.058 [RMI TCP Connection(455)-127.0.0.1] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [192.168.58.157/<unresolved>:6379]: java.util.concurrent.CancellationException
+2024-10-16 16:25:44.110 [RMI TCP Connection(455)-127.0.0.1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16 16:25:44.117 [RMI TCP Connection(455)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-16 16:25:44.121 [RMI TCP Connection(455)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

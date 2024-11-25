@@ -1,0 +1,15 @@
+#cateContainer{
+    min-width: 480px;
+    height: 120px;
+}
+.cateData, .featureData{
+    margin: 8px 8px 0px;
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    width: calc(25% - 16px);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.showPage{
+    margin: 16px auto;
+    max-width: 932px;
+}

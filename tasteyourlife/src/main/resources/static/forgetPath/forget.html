@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨曦-首頁</title>
+<link rel="icon" href="img/icon/favicon.icon" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="./css/style_customersize.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/guest.css">
+<style>
+    .renew {
+        margin: 15vh auto 0;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px #ddd;
+        width: 250px;
+        background-color: #fff;
+
+    }
+    .renew>* {
+        margin: 0 auto;
+    }
+    label,.renew>.errorForm {
+        padding-left: 30px;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+<script>
+    let captchaUrl = 'captcha/image?new=';
+    let errorFormGroups;
+    $(()=>{
+        $('.inputPasswd').on('mousedown',showPasswd).on('mouseup',hidePasswd)
+        captchaImageRefresh()
+        errorFormGroups = $('.renew .errorForm')
+        $('.renew').submit(submitHandler);
+        $('.captchaRefresh')
+            .on('mousedown', function(){
+                $(this).css('box-shadow','inset 0 4px 5px rgba(0, 0, 0, 0.5)');
+                captchaImageRefresh();
+            })
+            .on('mouseup', function(){
+                $(this).css('box-shadow','');
+            });
+    })
+    function submitHandler(e){
+        e.preventDefault()
+        errorFormGroups = $('.renew .errorForm')
+        let ajaxRequest = true
+        let formData = new FormData(e.target)
+        let reNewJson = {}
+        errorFormGroups.text("")
+        formData.forEach((value, key) => {
+            value = value.trim()
+            if(value){
+                reNewJson[key] = value
+            } else {
+                ajaxRequest = false;
+                let errorDiv = $('.renew .errorForm[data-error-' + key +']');
+                errorDiv.text(errorDiv.data('error-' + key));
+            }
+        })
+        if(ajaxRequest)
+            ajaxPost('customer/renew', 'application/json', reNewJson, cehckResponse)
+    }
+    function cehckResponse(response){
+    (response)
+        let responseCode = response['code']
+        if (responseCode == 200) {
+            let responseMsg = response['msg']
+            $('.renew').html(`<div class="textCenter f-32">${responseMsg}</div>`)
+            setTimeout( function() {
+				window.location.href = '/tyl'
+			}, 2000)
+        } else {
+            let errMsg = response.error
+            let imageCss = 'background-image';
+            let imagePng = 'url(data:image/png;base64,';
+            let inputForm = $('.renew input');
+            errorFormGroups.eq(0).text(errMsg.passwd);
+            errorFormGroups.eq(1).text(errMsg.passwd2);
+            errorFormGroups.eq(2).text(errMsg.captcha);
+            errorFormGroups.eq(3).text(errMsg.other);
+            inputForm.filter('[name=password],[name=password2],[name=captcha]').val('');
+            $('.captchaImg').fadeOut(300, function(){
+                $(this).css(imageCss, imagePng + errMsg.reCaptcha + ')').fadeIn(200)});
+        }
+    }
+
+    function ajaxPost(url,contextType,body,success,fail){
+        console.log("ajaxPOST:" + url);
+		$.ajax({
+			url: url,
+			headers: {'Content-Type': contextType},
+			method: 'POST',
+			data: JSON.stringify(body),
+			success: success,
+		});
+	}
+    function captchaImageRefresh(){
+        let theCaptchaUrl  = captchaUrl + new Date().getTime();
+        $('.captchaImg').css('background-image', 'url(' + theCaptchaUrl + ')');
+    }
+    function showPasswd() {
+        $('.password').attr('type','text')
+    }
+    function hidePasswd() {
+        $('.password').attr('type', 'password')
+    }
+</script>
+</head>
+<body>
+<form class="renew form">
+    <div class="fs-24 pt-10 textCenter">重置密碼</div>
+    <label class="ml-8 post-r">
+        <input type="password" name="password" class="password" placeholder="請輸入新密碼" autocomplete="new-password">
+    </label><br>
+    <div class='errorForm ml-8' data-error-password="密碼不可為空"></div>
+    <label class="ml-8 post-r">
+        <input type="password" name="password2" class="password" placeholder="請再輸入一次密碼" autocomplete="new-password">
+        <div class="inputPasswd"></div>
+    </label><br>
+    <div class='errorForm ml-8' data-error-password2="密碼不可為空"></div>
+    <label class="ml-8"><input type="text" name="captcha" placeholder="請輸入驗證碼" autocomplete="one-time-code"></label><br>
+    <div class='errorForm  ml-8' data-error-captcha="驗證碼不可為空"></div>
+    <div class="flex a-center center">
+	    	<div class="captchaImg mt-8"></div>
+	    	<div class="captchaRefresh mt-8 ml-16 br-100"></div>
+	    </div>
+    <div class='errorForm ml-8 ' data-error-response=""></div>
+    <div class="flex a-center center">
+    	<input class="submitReNew btn choose mt-8 mb-8 pointer" type="submit" value="重置密碼">
+    </div>
+</form>
+</body>
+</html>

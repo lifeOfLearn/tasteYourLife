@@ -1,0 +1,51 @@
+.listUser {
+	float: left;
+	padding-right: 16px;
+}
+.listUsername {
+	display: inline-block;
+	max-width: 8ch;
+	overflow: hidden;
+	white-space: nowrap; /* not new col*/
+	text-overflow: ellipsis;/*...*/
+}
+.memberDate {
+	width: 120px;
+    height: 5vh;
+    font-size: 16px;
+    border-radius: 10px;
+}
+#searchHistory{
+	background-color: #ffdbdb;
+}
+@media screen and (max-width: 400px) {
+	.listUsername {
+		display: none;
+	}
+}
+@media screen and (min-width: 450px) {
+	.listUser::after {
+		content: ' 您好';
+		font-size: 0.7rem;
+	}
+}
+@media screen and (max-width: 820px) {
+	.listMenu{
+		display: none;
+		flex-direction: column;
+		padding: 5px 10px;
+		position: absolute;
+		/*width: calc( 4 * 16px + 10px);*/
+		width: 85px;
+		border: 1pt solid #999;
+		border-radius: 10px;
+		background-color: #f0f0f0;
+		top: calc(44px + 2px);
+		right: 11px;
+	}
+	.listMenu>div:not(:last-child)::after {
+		content: "";
+		padding: 0px;
+	}
+	.listClick{display: block}
+}

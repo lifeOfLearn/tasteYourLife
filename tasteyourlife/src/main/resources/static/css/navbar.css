@@ -1,0 +1,122 @@
+@charset "UTF-8";
+.navbar {
+	position: fixed;
+    padding-top: 11px;
+    background-image: url("../img/nav_bg.png");
+    height: 61px;
+	min-width: 300px;
+}  
+.navbar:hover {
+	opacity: 1;
+}
+label {
+	cursor: text;
+}
+.homeImg {
+    background-image: url("../img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    width: 100px;
+    height: 50px;
+}
+
+.searchBar{
+    margin-top: 11px;
+    border-radius: 30px;
+    float: left;
+    width: calc(200px + 35px + 8px);
+    background-color: #ddd;
+}
+
+.searchInput {
+    float: left;
+    padding: 0px 16px;
+    border-radius: 30px 0px 0px 30px;
+    border-right: 1px solid #888;
+    width: calc(200px - 16px * 2);
+    height: 20px;
+    /*text-indent:16px;*/
+    border: none; /*去除原本input外框*/
+    outline: none; /*去除原本focus內框*/
+}
+.searchBtn {
+    padding-right: 3px;
+    float: right;
+    cursor: pointer;
+}
+
+
+
+.list{
+    margin-top: 11px;
+    margin-right: 11px;
+    float: right;
+}
+.listMenu {
+	display: flex;
+	float: left;
+    cursor: pointer;
+}
+
+.listClick {
+	display: none;
+	margin-top: -11px;
+	background-image: url("../img/nav_list.png");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: right;
+	width:32px;
+	height:44px;
+}
+.listMenu>div:not(:last-child)::after{
+    content: "|";
+    padding: 0px 16px;
+    cursor: default;
+}
+.listBlock{
+	display: none;
+	position: relative;
+	border: 1pt solid #999;
+	border-radius: 30px;
+	width: calc(170px + 2 * 10px + 2 * 10px + 16px);
+	background-color: white;
+	justify-content:center;
+	flex-direction: column;
+}
+.listBlockBackground{
+	display: none;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0, 0.8);
+	cursor: pointer;	
+}
+@media screen and (max-width: 540px) {
+	.listMenu{
+		display: none;
+		flex-direction: column;
+		padding: 5px 10px;
+		position: absolute;
+		width: calc( 4 * 16px + 10px);
+		border: 1pt solid #999;
+		border-radius: 10px;
+		background-color: #f0f0f0;
+		top: calc(44px + 2px);
+		right: 11px;
+	}
+	.listMenu>div:not(:last-child)::after {
+		content: "";
+		padding: 0px;
+	}
+	.listClick{display: block}
+}
+
+@media screen and (max-width: 720px) {
+	.searchInput {width: calc(100px - 16px * 2)}
+	.searchBar{width: calc(100px + 35px + 8px)}
+}

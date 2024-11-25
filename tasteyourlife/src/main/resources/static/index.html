@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨曦-首頁</title>
+<link rel="icon" href="img/icon/favicon.icon" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="./css/style_customersize.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/navbar.css">
+<link rel="stylesheet" type="text/css" href="./css/product.css">
+<link rel="stylesheet" type="text/css" href="./css/guest.css">
+<link rel="stylesheet" type="text/css" href="./css/category.css">
+<link rel="stylesheet" type="text/css" href="./css/indexP.css">
+<style class="headStyle">
+article {
+	position: relative;
+	top:72px;
+	border-radius: 10px;
+}
+
+article>.title {
+	display: flex;
+    margin: 2rem;
+	padding: 20px;
+	align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fce482;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+	border: 20px solid gray;
+    border-image: url(./img/border.png) 10;
+	clip-path: inset(0% 0% 0% 0%);
+    animation: borderSlice 2s linear infinite alternate;
+}
+footer {
+	position: relative;
+	top: 72px;
+}
+
+
+@keyframes borderSlice {
+	0% {
+		clip-path: inset(0% 0% 0% 0%);
+		border-image-slice: 10;
+	}
+	100% {
+		clip-path: inset(0% 0% 10% 0%);
+		border-image-slice: 27;
+	}
+
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+<script src="./script/index.js"></script>
+<script src="./script/navbar.js"></script>
+<script src="./script/guest.js"></script>
+<script src="./script/indexP.js"></script>
+<script src="./script/category.js"></script>
+<script src="./script/order.js"></script>
+<script>
+$(document).ready(() => {
+    htmlSubInclude();
+    navScrollHandler();
+    getProductTop();
+    $(window).scroll(navScrollHandler)
+             .scroll(blockScrollHandler);
+})
+</script>
+</head>
+<body>
+    <header class="nav"></header>
+    <article class="z-9">
+        <div class="title fs-24 pt-10 textCenter">最新商品</div>
+		<div class="newProduct nform flex a-center center"></div>
+		<div class="title fs-24 pt-10 textCenter">熱銷商品</div>
+		<div class="hotProduct nform flex a-center center"></div>
+		<!-- 
+		<div class="title fs-24 pt-10 textCenter">關於我們</div>
+		<div class="about ml-32">
+			<iframe width='430' height='330' class="ml-32" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14472.397601857985!2d121.16675669848439!3d24.928683479453007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34682361c065cbe9%3A0xc24080034849b3e3!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5qGD56u56IuX5YiG572y5bm8542F6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2sus!4v1730128889672!5m2!1szh-TW!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe width="430" height="330" class="ml-32" src="https://www.youtube.com/embed/esgD8_tg6ng?autoplay=1&loop=1&playlist=esgD8_tg6ng&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+		</div> -->
+    </article>
+    <footer class="w-100 textCenter">
+		<hr>
+		<div> Taste Your Life &copy; 2024/10~</div>
+	</footer>
+</body>
+</html>
