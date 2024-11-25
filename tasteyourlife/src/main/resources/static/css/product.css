@@ -1,0 +1,48 @@
+.newProduct, .hotProduct{
+	flex-direction: row;
+}
+.nform .newP,.nform .hotP, .nform .pageP, .nform .pageS, .nform .catePageP {
+	margin: 16px;
+	border: 2px solid rgba(234, 158, 158,0.5);
+	border-radius: 10px;
+	background-color: #fff;
+}
+.productImage {
+	background-image: url("../img/1.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin: 20px;
+	width: 200px;
+	height: 150px;
+}
+.productName , .productInfo{
+	margin: 20px;
+	padding-top: 10px;
+	border-top: 2px solid #ccc;
+}
+
+.productInfo {
+	border-color: #eee;
+	text-align: left;
+	font-weight: 500;
+}
+
+.addcart, .buy, .buy:checked {
+	width: 5rem;
+	height: 2.5rem;
+	border: 0;
+	border-radius: 10px;
+	background-color: rgba(255,0,0,0.2);
+}
+
+.buy:hover {
+	background-color: rgba(255,0,0,0.5);
+}
+
+.addcart, .addcart:checked {
+	background-color: rgba(0,0,255,0.2);
+}
+
+.addcart:hover {
+	background-color: rgba(0,0,255,0.5);
+}

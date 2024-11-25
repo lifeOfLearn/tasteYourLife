@@ -1,0 +1,89 @@
+<form class="login form">
+    <div class="fs-24 pt-10 textCenter">登入</div>
+    <label class="ml-8 post-r"><input type="text" name="user" placeholder="請輸入手機/信箱" autocomplete="name"></label><br>
+    <div class='errorForm ml-8' data-error-user="帳號不可為空"></div>
+    <label class="ml-8 post-r">
+        <input type="password" name="passwd" class="password" placeholder="請輸入密碼" autocomplete="new-password">
+        <div class="inputPasswd"></div>
+    </label><br>
+    <div class='errorForm ml-8' data-error-passwd="密碼不可為空"></div>
+    <label class="ml-8 post-r"><input type="text" name="captcha" placeholder="請輸入驗證碼" autocomplete="one-time-code"></label><br>
+    <div class='errorForm  ml-8' data-error-captcha="驗證碼不可為空"></div>
+    <div class="mt-8 flex a-center center">
+	    	<div class="captchaImg"></div>
+	    	<div class="captchaRefresh ml-16 br-100"></div>
+	    </div>
+    <div class='errorForm ml-8' data-error-response=""></div>
+    <div class="flex a-center center">
+    	<input class="btn choose mt-8 mb-8 pointer" type="submit" value="登入">
+    </div>
+</form>
+<form class="forget form none">
+    <div class="fs-24 pt-10 textCenter">忘記密碼</div>
+    <label class="ml-16"><input type="text" name="user" placeholder="請輸入手機/信箱" autocomplete="name"></label><br>
+    <div class='errorForm ml-16' data-error-user="帳號不可為空"></div>
+    <label class="ml-16"><input type="text" name="captcha" placeholder="請輸入驗證碼" autocomplete="one-time-code"></label><br>
+    <div class='errorForm  ml-16' data-error-captcha="驗證碼不可為空"></div>
+    <div class="mt-16 flex a-center center">
+	    	<div class="captchaImg"></div>
+	    	<div class="captchaRefresh ml-16 br-100"></div>
+	    </div>
+    <div class='errorForm ml-16' data-error-response=""></div>
+    <div class="flex a-center center">
+    	<input class="btn choose mt-16 mb-8 pointer" type="submit" value="寄送重置密碼郵件">
+    </div>
+</form>
+
+
+<form class="register form none">
+    <div class="fs-24 pt-10 textCenter">註冊</div>
+    <label class="ml-8 post-r"><input type="text" name="name" placeholder="請輸入姓名" autocomplete="name"></label><br>
+    <div class='errorForm ml-8' data-error-name="姓名不可為空"></div>
+    <label class="ml-8 post-r"><input type="phone" name="phone" placeholder="請輸入手機" autocomplete="phone"></label><br>
+    <div class='errorForm ml-8' data-error-phone="手機不可為空"></div>
+    <label class="ml-8 post-r"><input type="text" name="email" placeholder="請輸入Email" autocomplete="email"></label><br>
+    <div class='errorForm ml-8' data-error-email="Email不可為空"></div>
+    <label class="ml-8 post-r"><input type="text" name="rocid" placeholder="請輸入身份證字號" autocomplete="username"></label><br>
+    <div class='errorForm ml-8' data-error-rocid="身份證字號不可為空"></div>
+    <label class="ml-8 post-r">
+        <input type="password" name="password" class="password" placeholder="請輸入密碼" autocomplete="new-password">
+    </label><br>
+    <div class='errorForm ml-8' data-error-passwd="密碼不可為空"></div>
+    <label class="ml-8 post-r">
+        <input type="password" name="password2" class="password" placeholder="請再輸入一次密碼" autocomplete="new-password">
+        <div class="inputPasswd"></div>
+    </label><br>
+    <div class='errorForm ml-8' data-error-passwd2="密碼不可為空"></div>
+    <label class="ml-8 post-r"><span class="ml-8">請選擇生日:</span><input type="date" name="birthday" class="ml-12 pointer" placeholder="請設定生日"></label><br>
+    <div class='errorForm ml-8' data-error-birthday="生日日期不可為空"></div>
+    <label class="ml-8"><span>請選擇性別:</span><br>
+        <input type="radio" name="gender" value="M" class="pointer"><span>男</span>
+        <input type="radio" name="gender" value="F" class="pointer"><span>女</span><br>
+        <input type="radio" name="gender" value="O" class="pointer"><span>其他</span>
+        <input type="radio" name="gender" value="N" class="pointer"><span>不透漏</span><br>
+    </label><br>
+    <label class="ml-8"><span>請選擇血型:</span><br>
+        <input type="radio" name="blood" value="A" class="pointer"><span>A型</span>
+        <input type="radio" name="blood" value="B" class="pointer"><span>B型</span><br>
+        <input type="radio" name="blood" value="O" class="pointer"><span>O型</span>
+        <input type="radio" name="blood" value="AB" class="pointer"><span>AB型</span><br>
+        <input type="radio" name="blood" value="N" class="pointer"><span>不透漏</span>
+    </label><br>
+    <label class="ml-8"><span>地址:</span><br>
+        <textarea name="address"></textarea>
+    </label><br>
+    <label class="ml-8"><input type="text" name="captcha" placeholder="請輸入驗證碼" autocomplete="one-time-code"></label><br>
+    <div class='errorForm  ml-8' data-error-captcha="驗證碼不可為空"></div>
+    <div class="mt-8 flex a-center center">
+	    	<div class="captchaImg"></div>
+	    	<div class="captchaRefresh ml-16 br-100"></div>
+	    </div>
+    <div class='errorForm ml-8' data-error-response=""></div>
+    <div class="flex a-center center">
+    	<input class="btn choose mt-8 mb-8 pointer" type="submit" value="註冊">
+    </div>
+</form>
+
+<div class="loginBtn getForm textCenter fs-12 blue pointer mb-8 none" data-name="登入">登入</div>
+<div class="registerBtn getForm textCenter fs-12 blue pointer mb-8" data-name="註冊">註冊</div>
+<div class="forgetBtn getForm textCenter fs-12 blue pointer mb-8" data-name="忘記密碼">忘記密碼?</div>

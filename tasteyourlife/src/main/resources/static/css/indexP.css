@@ -1,0 +1,33 @@
+#showData {
+	width: 200px;
+}
+#showImage {
+    width: 300px;
+    height: 165px;
+    background-repeat: no-repeat;
+	background-size: contain;
+}
+.showBlock {
+	display: none;
+	position: fixed;
+	width: 700px;
+	/* height: 68vh; */
+	height: 450px;
+	top: 72px;
+	border-radius: 10px;
+	box-shadow: 15px 15px 30px #888;
+	background-color: white;
+}
+.clickBlock {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0, 0.8);
+	cursor: pointer;
+}
+.showAname{
+	align-content: center;
+}

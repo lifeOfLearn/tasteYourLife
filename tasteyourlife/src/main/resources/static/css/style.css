@@ -1,0 +1,169 @@
+@charset "UTF-8";
+body{
+    margin:0px;
+    font-weight: 900;
+    font-family: 'Noto Sans TC', sans-serif;
+	min-width: 360px;
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+	background-image: url('../img/background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.productD{
+	width: 200px;
+}
+.form>label {
+	display: inline-block;
+	padding-top: 20px;
+}
+.login label::before,.register label:nth-child(-n + 20)::before,.register label:nth-child(29)::before{
+	content: '*';
+	color:red;
+}
+.form>.errorForm{
+	padding: 0px;
+	color:red;
+}
+.form input{
+	padding: 0px 10px 10px;
+	border: none;
+	border-bottom: 1px solid #888;
+	outline: none;
+	width: 150px;
+	min-width: 150px;
+	font-size: 16px;
+}
+
+.inputPasswd{
+	background-image: url("../img/pwdHidden.png");
+	background-size: contain;
+	position: absolute;
+    bottom: 8px;
+    left: 180px;
+	display: block;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+.inputPasswd:active{
+	background-image: url("../img/pwdView.png");
+}
+.captchaImg{
+	width: 104px;
+	height: 72px;
+}
+.captchaRefresh{
+	background-image: url("../img/captchaRefresh.png");
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+}
+.captchaRefresh:hover{
+	animation: rotateAnimation 0.5s linear forwards;
+	cursor: pointer;
+}
+.getForm:hover, .submitGuest:hover, .submitReNew:hover{
+	text-shadow: 2px 2px 5px gray;
+}
+
+.submitGuest:hover, .submitReNew:hover{
+	box-shadow: 2px 2px 5px gray;
+}
+.form .btn, .nform .btn{
+	padding-top: 10px;
+	border: 0px;
+	border-radius: 10px;
+	background-clip: padding-box;
+	cursor: pointer;
+}
+.form .choose, .nform .choose{
+	padding: 5px;
+    border: 1px solid #ccc;
+	cursor: pointer;
+}
+.choose:hover{
+	/* margin-bottom: 5px; */
+	position: relative;
+    top: -2px;
+	align-content: center;
+	box-shadow: 0px 5px 20px #888;
+	font-weight: bold;
+	/* background-color: #fff; */
+}
+
+.pUp{
+	background-image: url(../img/up.png);
+}
+.pUp:hover{
+	background-image: url(../img/upHover.png);
+}
+.pDown{
+	background-image: url(../img/down.png);
+}
+.pDown:hover{
+	background-image: url(../img/downHover.png);
+}
+.pUp:active, .pDown:active{
+	position: relative;
+	top: 1px;
+}
+.pCalc{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+.qty::-webkit-outer-spin-button,.qty::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+.qty{
+	width:32px;
+	text-align: center;
+	vertical-align: top;
+}
+.garbage{
+	width: 30px;
+    height: 30px;
+	background-image: url("../img/garbage.png");
+}
+.garbage:hover{
+	background-image: url("../img/garbage_hover.png");
+}
+.icon{
+	width: 75px;
+    height: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.checkBtn ,.cartChangeBtn{
+	width: 72px;
+	height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.checkBtn:hover, .cartChangeBtn:hover ,.submitCheckout:hover{
+	text-shadow: 2px 1px 10px #efd014;
+}
+.submitCheckout {
+	width: 25%;
+    margin: 16px auto;
+    height: 5vh;
+    line-height: 5vh;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+	cursor: pointer;
+}
+.submitCheckout:hover {
+	box-shadow:  2px 1px 10px #ccc;
+	position: relative;
+	top : -1px;
+}

@@ -1,0 +1,57 @@
+-- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+--
+-- Host: 192.168.58.58    Database: tasteyourlife
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.11.6-MariaDB-0+deb12u1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `order_history`
+--
+
+DROP TABLE IF EXISTS `order_history`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `order_history` (
+  `order_id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL,
+  `pay` enum('Y','N') DEFAULT 'N',
+  `create_time` timestamp NOT NULL DEFAULT current_timestamp(),
+  `update_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`order_id`,`cart_id`),
+  KEY `fk_cart_history_idx` (`cart_id`),
+  CONSTRAINT `fk_cart_history` FOREIGN KEY (`cart_id`) REFERENCES `cart` (`cart_id`),
+  CONSTRAINT `fk_order_history` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order_history`
+--
+
+LOCK TABLES `order_history` WRITE;
+/*!40000 ALTER TABLE `order_history` DISABLE KEYS */;
+INSERT INTO `order_history` VALUES (6,27,'N','2024-11-02 00:07:34','2024-11-02 00:07:34'),(6,28,'N','2024-11-02 00:07:34','2024-11-02 00:07:34'),(7,22,'N','2024-11-02 07:53:31','2024-11-02 07:53:31'),(7,23,'N','2024-11-02 07:53:31','2024-11-02 07:53:31'),(7,25,'N','2024-11-02 07:53:31','2024-11-02 07:53:31'),(7,26,'N','2024-11-02 07:53:31','2024-11-02 07:53:31'),(7,29,'N','2024-11-02 07:53:31','2024-11-02 07:53:31'),(7,30,'N','2024-11-02 07:53:31','2024-11-02 07:53:31'),(8,31,'N','2024-11-02 08:00:21','2024-11-02 08:00:21'),(9,32,'N','2024-11-02 08:02:16','2024-11-02 08:02:16'),(9,33,'N','2024-11-02 08:02:16','2024-11-02 08:02:16'),(10,33,'N','2024-11-02 08:02:16','2024-11-02 08:02:16'),(10,34,'N','2024-11-02 08:02:16','2024-11-02 08:02:16'),(16,35,'Y','2024-11-03 06:13:21','2024-11-03 06:13:21'),(17,36,'Y','2024-11-03 06:15:56','2024-11-03 06:15:56'),(18,43,'N','2024-11-03 17:22:08','2024-11-03 17:22:08'),(18,45,'N','2024-11-03 17:22:08','2024-11-03 17:22:08'),(18,46,'N','2024-11-03 17:22:08','2024-11-03 17:22:08'),(19,47,'N','2024-11-03 17:23:44','2024-11-03 17:23:44'),(20,38,'N','2024-11-03 17:26:00','2024-11-03 17:26:00'),(21,49,'N','2024-11-04 00:46:41','2024-11-04 00:46:41'),(22,50,'N','2024-11-04 01:45:27','2024-11-04 01:45:27'),(22,51,'N','2024-11-04 01:45:27','2024-11-04 01:45:27'),(22,53,'N','2024-11-04 01:45:27','2024-11-04 01:45:27'),(23,54,'N','2024-11-04 05:32:23','2024-11-04 05:32:23');
+/*!40000 ALTER TABLE `order_history` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-11-05  8:37:21
